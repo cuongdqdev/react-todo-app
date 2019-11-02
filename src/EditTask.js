@@ -29,8 +29,8 @@ export class EditTask extends Component {
                             defaultValue={this.state.editItem.taskName}
                             onChange={this._handleChangeName} />
                     </div>
-                    <button type="submit" style={{ marginRight: 5 + 'px' }} className="btn btn-default" onClick={this._handleEditTask}>@ Chỉnh sửa</button>
-                    <button type="button" className="btn btn-default" onClick={this.props.closeForm}>Trở về</button>
+                    <button type="submit" style={{ marginRight: 5 + 'px' }} className="btn btn-warning" onClick={this._handleEditTask}>@ Chỉnh sửa</button>
+                    <button type="button" className="btn btn-primary" onClick={this.props.closeForm}>Trở về</button>
                 </div>
             </>
         )

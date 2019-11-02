@@ -26,7 +26,12 @@ export class TaskList extends Component {
         })
     }
     addTask = (taskName) => {
-        this.state.tasks.push(taskName)
+
+        const tasks = [...this.state.tasks, taskName]
+        this.setState({
+            tasks: tasks
+        })
+        //this.state.tasks.push(taskName)
         this.forceUpdate()
     }
 
@@ -40,7 +45,12 @@ export class TaskList extends Component {
         this.setState({ editTask: { id: index, taskName: taskName } })
     }
     doEdit = (id, taskName) => {
-        this.state.tasks[id] = taskName
+        const tasks = [...this.state.tasks];
+        tasks[id] = taskName;
+        this.setState({
+            tasks: tasks
+        })
+        //this.state.tasks[id] = taskName
         this.forceUpdate()
     }
 
@@ -62,13 +72,14 @@ export class TaskList extends Component {
                 <h1>Tạo ứng dụng Todo với ReactJS</h1>
                 <br />
                 <br />
-                <button type="button" className="btn btn-outline-primary" onClick={this.setStatus} >@ Thêm task</button>
+                <button type="button" className="btn btn-success" onClick={this.setStatus} >@ Thêm task</button>
                 <h2>Danh sách các task</h2>
                 <table className="table table-striped">
                     <thead>
                         <tr>
                             <th>Tên của task</th>
                             <th>Chỉnh sửa</th>
+                            <th>Xóa</th>
                         </tr>
                     </thead>
                     <tbody>

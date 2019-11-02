@@ -36,8 +36,8 @@ export class AddTask extends Component {
                         <input type="text" className="form-control" placeholder="Nhập vào tên của task" onChange={this._handleChangeName} />
                     </div>
 
-                    <button type="submit" style={{ marginRight: 5 + 'px' }} className="btn btn-default" onClick={this._handleAddTask}>Thêm mới</button>
-                    <button type="button" className="btn btn-default" onClick={this._handleBackToList}>Trở về</button>
+                    <button type="submit" style={{ marginRight: 5 + 'px' }} className="btn btn-success" onClick={this._handleAddTask}>@ Thêm mới</button>
+                    <button type="button" className="btn btn-primary" onClick={this._handleBackToList}>Trở về</button>
                 </div>
             </>
         )
